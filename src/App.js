@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 
 function App() {
 
@@ -6,26 +7,7 @@ function App() {
 
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Entry</th>
-            <th>Weight</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {entries.map((entry, index) => {
-            return (
-              <tr>
-                <td>{index+1}</td>
-                <td>{entry.weight}</td>
-                <td>{entry.date}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <DisplayEntries parentEntries={entries} />
     </div>
   );
 }
