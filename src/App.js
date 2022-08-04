@@ -10,7 +10,7 @@ function App() {
   let tempEntries = [...entries, entry]
   setEntries(tempEntries)
  }
- 
+
   return (
     <div>
       <DisplayEntries parentEntries={entries} />
