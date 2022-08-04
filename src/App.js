@@ -10,12 +10,12 @@ function App() {
   let tempEntries = [...entries, entry]
   setEntries(tempEntries)
  }
-
+ 
   return (
     <div>
       <DisplayEntries parentEntries={entries} />
       <AddEntryForm addNewEntry={addNewEntry}/>
-      <EntriesChartTracker />
+      <EntriesChartTracker parentEntries={entries}/>
     </div> 
   );
 }
